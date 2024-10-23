@@ -1,9 +1,9 @@
 package com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask2.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobject_model.page.AbstractPage;
@@ -25,22 +25,27 @@ public class PasteBinSearchResults2 extends AbstractPage {
 
     public PasteBinSearchResults2(WebDriver driver){
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public String getPageTitleText(){
-        return pasteTitle.getText();
+        return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
+                .until(ExpectedConditions.visibilityOf(pasteTitle)).getText();
     }
 
     public String getPasteSyntax(){
-        return pasteSyntax.getText();
+        return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
+                .until(ExpectedConditions.visibilityOf(pasteSyntax)).getText();
     }
 
     public String getPasteCode(){
-        return pasteCode.getText();
+        return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
+                .until(ExpectedConditions.visibilityOf(pasteCode)).getText();
     }
 
     public String getPasteExpiration(){
-        return pasteExpiration.getText().replaceAll("MIN", "Minutes");
+        return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
+                .until(ExpectedConditions.visibilityOf(pasteExpiration)).getText().replaceAll("MIN", "Minutes");
     }
 
 

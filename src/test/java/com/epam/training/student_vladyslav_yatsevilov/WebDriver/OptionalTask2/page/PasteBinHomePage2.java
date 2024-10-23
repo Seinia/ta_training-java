@@ -40,12 +40,12 @@ public class PasteBinHomePage2 extends AbstractPage {
 
     public PasteBinHomePage2(WebDriver driver){
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public PasteBinHomePage2 openPage(){
         driver.get(HOMEPAGE_URL);
         log.info("Pastebin is opened");
-        PageFactory.initElements(driver, this);
         return this;
     }
 
