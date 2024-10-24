@@ -3,7 +3,7 @@ package com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask2.s
 import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask2.model.Paste2;
 import com.epam.training.student_vladyslav_yatsevilov.infrastructure.util.TestDataReader;
 
-public class PasteService2 {
+public class PasteCreator2 {
     private static final String TESTDATA_PASTE_CODE = "testdata.paste.code2";
     private static final String TESTDATA_PASTE_SYNTAX = "testdata.paste.syntax2";
     private static final String TESTDATA_PASTE_EXPIRATION = "testdata.paste.expiration2";

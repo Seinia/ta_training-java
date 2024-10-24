@@ -2,7 +2,7 @@ package com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.t
 
 import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.model.Paste1;
 import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.page.PasteBinHomePage1;
-import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.service.PasteService1;
+import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.service.PasteCreator1;
 import com.epam.training.student_vladyslav_yatsevilov.infrastructure.test.BaseTest;
 import org.testng.annotations.Test;
 
@@ -12,7 +12,7 @@ public class WebDriverPastebinTest1 extends BaseTest {
 
     @Test(description = "PasteBin input data test")
     public void commonSearchTestResultsAreNotEmpty(){
-        Paste1 paste = PasteService1.getPasteDataFromProperties();
+        Paste1 paste = PasteCreator1.getPasteDataFromProperties();
         PasteBinHomePage1 expectedSearchResultsNumber = new PasteBinHomePage1(driver)
                 .openPage()
                 .createPaste(paste);
