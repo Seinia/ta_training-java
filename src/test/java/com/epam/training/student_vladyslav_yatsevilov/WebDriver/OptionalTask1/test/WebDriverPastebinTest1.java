@@ -4,20 +4,23 @@ import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.mo
 import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.page.PasteBinHomePage1;
 import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask1.service.PasteCreator1;
 import com.epam.training.student_vladyslav_yatsevilov.infrastructure.test.BaseTest;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.testng.Assert.assertNotNull;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 
 public class WebDriverPastebinTest1 extends BaseTest {
 
-    @Test(description = "PasteBin input data test")
+    @Test
+    @DisplayName("PasteBin input data test")
     public void commonSearchTestResultsAreNotEmpty(){
         Paste1 paste = PasteCreator1.getPasteDataFromProperties();
         PasteBinHomePage1 expectedSearchResultsNumber = new PasteBinHomePage1(driver)
                 .openPage()
                 .createPaste(paste);
 
-        assertNotNull(expectedSearchResultsNumber);
+        assertThat(expectedSearchResultsNumber).isNotNull();
     }
 
 }

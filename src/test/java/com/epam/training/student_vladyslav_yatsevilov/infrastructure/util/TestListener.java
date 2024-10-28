@@ -3,10 +3,11 @@ package com.epam.training.student_vladyslav_yatsevilov.infrastructure.util;
 import com.epam.training.student_vladyslav_yatsevilov.infrastructure.driver.DriverSingleton;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.TestWatcher;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +15,10 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Slf4j
-public class TestListener implements ITestListener {
+public class TestListener implements TestWatcher {
 
-    public void onTestFailure(ITestResult iTestResult) {
+    @Override
+    public void testFailed(ExtensionContext context, Throwable cause) {
         saveScreenshot();
     }
 

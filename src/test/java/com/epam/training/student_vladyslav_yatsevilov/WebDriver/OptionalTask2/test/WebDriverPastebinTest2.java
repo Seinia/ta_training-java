@@ -5,23 +5,27 @@ import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask2.pa
 import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask2.page.PasteBinSearchResults2;
 import com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask2.service.PasteCreator2;
 import com.epam.training.student_vladyslav_yatsevilov.infrastructure.test.BaseTest;
-import static org.testng.Assert.*;
-import org.testng.annotations.Test;
+import org.assertj.core.api.SoftAssertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 
 public class WebDriverPastebinTest2 extends BaseTest {
 
-    @Test(description = "PasteBin input data test")
+    @Test
+    @DisplayName("PasteBin input data test")
     public void commonSearchTestResultsAreNotEmpty(){
         Paste2 paste = PasteCreator2.getPasteDataFromProperties();
         PasteBinSearchResults2 expectedPage = new PasteBinHomePage2(driver)
                 .openPage()
                 .createPaste(paste);
 
+        SoftAssertions softAssertions = new SoftAssertions();
 
-        assertEquals(expectedPage.getPageTitleText(), paste.getPasteTitle());
-        assertEquals(expectedPage.getPasteCode(), paste.getPasteCode());
-        assertEquals(expectedPage.getPasteSyntax(), paste.getPasteSyntax());
-        assertEquals(expectedPage.getPasteExpiration(), paste.getPasteExpiration());
+        softAssertions.assertThat(expectedPage.getPageTitleText()).isEqualTo(paste.getPasteTitle());
+        softAssertions.assertThat(expectedPage.getPasteCode()).isEqualTo(paste.getPasteCode());
+        softAssertions.assertThat(expectedPage.getPasteSyntax()).isEqualTo(paste.getPasteSyntax());
+        softAssertions.assertThat(expectedPage.getPasteExpiration()).isEqualTo(paste.getPasteExpiration());
     }
 
 }

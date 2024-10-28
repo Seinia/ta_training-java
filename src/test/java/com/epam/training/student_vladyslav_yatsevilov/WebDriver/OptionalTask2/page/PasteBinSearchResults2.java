@@ -1,12 +1,12 @@
 package com.epam.training.student_vladyslav_yatsevilov.WebDriver.OptionalTask2.page;
 
+import com.epam.training.student_vladyslav_yatsevilov.infrastructure.page.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageobject_model.page.AbstractPage;
 
 public class PasteBinSearchResults2 extends AbstractPage {
 
