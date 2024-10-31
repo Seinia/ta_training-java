@@ -54,14 +54,16 @@ public class SauceDemoMainPage extends AbstractPage {
 
     public SauceDemoDashboardPage clickLogin(){
         new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
-                .until(ExpectedConditions.elementToBeClickable(loginButton)).click();
+                .until(ExpectedConditions.visibilityOf(loginButton)).click();
         log.info("User clicked login button");
         return new SauceDemoDashboardPage(driver);
     }
 
     public String getErrorMessage(){
-        return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
+        String message = new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.visibilityOf(errorMessage)).getText().replaceAll("Epic sadface: ", "");
+        log.info("Get an error: ", message);
+        return message;
     }
 
 }

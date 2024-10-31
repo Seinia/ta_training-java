@@ -1,6 +1,6 @@
 Feature: Test login functionality
 
-  Scenario Outline: Test Login form with empty credentials
+  Scenario Outline: Test Login form with different credentials
     Given browser is opened on Swag Labs login page
     When user enters username "<username>" and password "<password>"
     And user click login button

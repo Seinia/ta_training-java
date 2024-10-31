@@ -1,13 +1,13 @@
 package com.epam.training.student_vladyslav_yatsevilov.final_task.runner;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+import org.junit.platform.suite.api.*;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(
-        features = "src/test/resources/features/login.feature",
-        glue = {"com.epam.training.student_vladyslav_yatsevilov.final_task.step_definitions"}
-)
+import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
+
+@Suite
+@IncludeEngines("cucumber")
+@SelectClasspathResource("features")
+@SelectPackages("com.epam.training.student_vladyslav_yatsevilov.final_task.runner")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.epam.training.student_vladyslav_yatsevilov.final_task.step_definitions")
 public class RunnerClass {
 }

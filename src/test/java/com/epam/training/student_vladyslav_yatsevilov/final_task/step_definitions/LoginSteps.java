@@ -2,7 +2,7 @@ package com.epam.training.student_vladyslav_yatsevilov.final_task.step_definitio
 
 import com.epam.training.student_vladyslav_yatsevilov.final_task.page.SauceDemoDashboardPage;
 import com.epam.training.student_vladyslav_yatsevilov.final_task.page.SauceDemoMainPage;
-import com.epam.training.student_vladyslav_yatsevilov.infrastructure.driver.DriverSingleton;
+import com.epam.training.student_vladyslav_yatsevilov.infrastructure.driver.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class LoginSteps {
@@ -20,19 +21,22 @@ public class LoginSteps {
 
     @Before
     public void setUp(){
-        driver = DriverSingleton.getDriver();
+        driver = DriverFactory.getDriver();
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
     }
 
     @Given("browser is opened on Swag Labs login page")
     public void browser_is_opened_on_swag_labs_login_page(){
-        sauceDemoMainPage = new SauceDemoMainPage(driver);
-        sauceDemoMainPage.openPage();
+        sauceDemoMainPage = new SauceDemoMainPage(driver)
+                .openPage();
     }
 
     @When("user enters username {string} and password {string}")
     public void user_enters_username_and_password(String username, String password){
-        sauceDemoMainPage.setUsername(username);
-        sauceDemoMainPage.setPassword(password);
+        sauceDemoMainPage
+                .setUsername(username)
+                .setPassword(password);
     }
 
     @And("user click login button")
@@ -51,7 +55,8 @@ public class LoginSteps {
 
     @After
     public void stopBrowser(){
-        DriverSingleton.closeDriver();
+        DriverFactory.closeDriver();
+//        driver.quit();
     }
 
 }

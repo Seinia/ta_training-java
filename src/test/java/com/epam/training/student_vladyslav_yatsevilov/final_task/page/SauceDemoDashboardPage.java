@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 @Slf4j
 public class SauceDemoDashboardPage extends AbstractPage {
@@ -25,6 +27,7 @@ public class SauceDemoDashboardPage extends AbstractPage {
     }
 
     public String getLogoText(){
-        return logo.getText();
+        return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
+                .until(ExpectedConditions.visibilityOf(logo)).getText();
     }
 }
