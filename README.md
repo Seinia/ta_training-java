@@ -9,10 +9,14 @@ This project contains automated tests for the login form on the [SauceDemo](http
 #Maven commands to execute tests
 
 To execute final test for Edge browser use the following command:
-` mvn -Dbrowser=edge -Dtest=RunnerClass -Denvironment=qa clean test `
+```bash
+mvn -Dbrowser=edge -Dtest=RunnerClass -Denvironment=qa clean test
+```
 
 To execute final test for Firefox browser use the following command:
-``` mvn -Dbrowser=edge -Dtest=RunnerClass -Denvironment=qa clean test ```
+```bash
+mvn -Dbrowser=edge -Dtest=RunnerClass -Denvironment=qa clean test
+```
 
 ## Test Scenarios
 
