@@ -37,3 +37,8 @@ mvn -Dbrowser=firefox -Dtest=RunnerClass -Denvironment=qa clean test
   - Click the "Login" button.
   - Verify that the title "Swag Labs" appears on the dashboard.
 
+- ## Testing Features
+
+  - **Parallel Execution**: Tests can be executed simultaneously, which accelerates the testing process.
+  - **Logging**: Logging is implemented to enhance traceability and simplify debugging during test execution.
+  - **Data Provider**: Tests are parameterized using Data Providers, making it easier to handle various input scenarios.
