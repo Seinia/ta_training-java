@@ -6,7 +6,7 @@ This project contains automated tests for the login form on the [SauceDemo](http
 
 ## Running Tests
 
-## Maven commands to execute tests
+### Maven commands to execute tests
 
 To execute final test for Edge browser use the following command:
 ```bash
