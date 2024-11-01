@@ -15,7 +15,7 @@ mvn -Dbrowser=edge -Dtest=RunnerClass -Denvironment=qa clean test
 
 To execute final test for Firefox browser use the following command:
 ```bash
-mvn -Dbrowser=edge -Dtest=RunnerClass -Denvironment=qa clean test
+mvn -Dbrowser=firefox -Dtest=RunnerClass -Denvironment=qa clean test
 ```
 
 ## Test Scenarios
