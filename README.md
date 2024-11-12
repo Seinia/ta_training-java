@@ -77,7 +77,7 @@ mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest1 -Denvironment=qa clean test
    * Syntax Highlighting: "Bash"
    * Paste Expiration: "10 Minutes"
    * Paste Name / Title: "how to gain dominance among developers"
--Save 'paste' and check the following:
+- Save 'paste' and check the following:
    * Browser page title matches 'Paste Name / Title'
    * Syntax is suspended for bash
    * Check that the code matches the one from paragraph 2.
