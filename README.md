@@ -5,6 +5,8 @@
 This project contains automated tests for the login form on the [SauceDemo](https://www.saucedemo.com/) website. The tests cover various login scenarios, including validation of error messages and successful login.
 
 ### Requirements:
+- Provide parallel execution;
+- Add logging for tests and use Data Provider to parametrize tests;
 - Test automation tool: Selenium WebDriver;
 - Project builder: Maven;
 - Browsers: Firefox, Edge;
