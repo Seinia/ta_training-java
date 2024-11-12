@@ -50,7 +50,7 @@ mvn -Dbrowser=firefox -Dtest=RunnerClass -Denvironment=qa clean test
 
 ## Pastebin Test №1
  
-## Test Scenario
+### Test Scenario
 
 - **UC-1**: Test creation form of paste.
   - Enter any text in the "Username" and "Password" fields.
@@ -65,7 +65,7 @@ mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest1 -Denvironment=qa clean test
 
 ## Pastebin Test №2
  
-## Test Scenario
+### Test Scenario
 
 - **UC-1**: Test creation form of paste and verification of inputed data.
 - Open https://pastebin.com/ or a similar service in any browser.
