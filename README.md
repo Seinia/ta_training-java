@@ -58,7 +58,7 @@ mvn -Dbrowser=firefox -Dtest=RunnerClass -Denvironment=qa clean test
   - Click the "Login" button.
   - Verify the error message: "Username is required".
 
-To execute final test for Edge browser use the following command:
+To execute final test for Chrome browser use the following command:
 ```bash
 mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest1 -Denvironment=qa clean test
 ```
@@ -83,7 +83,7 @@ mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest1 -Denvironment=qa clean test
    * Check that the code matches the one from paragraph 2.
 
 
-To execute final test for Edge browser use the following command:
+To execute final test for Chrome browser use the following command:
 ```bash
 mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest2 -Denvironment=qa clean test
 ```
@@ -115,7 +115,7 @@ mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest2 -Denvironment=qa clean test
 
 
 
-To execute final test for Edge browser use the following command:
+To execute final test for Chrome browser use the following command:
 ```bash
 mvn -Dbrowser=chrome -Dtest=GoogleCloudPriceCalculatorTest -Denvironment=qa clean test
 ```
