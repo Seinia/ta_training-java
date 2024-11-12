@@ -4,6 +4,9 @@
 
 This project contains automated tests for the login form on the [SauceDemo](https://www.saucedemo.com/) website. The tests cover various login scenarios, including validation of error messages and successful login.
 
+![image](https://github.com/user-attachments/assets/30d1589b-6719-4d5f-973c-bc97794dc9a2)
+
+
 ## Running Tests
 
 ### Maven commands to execute tests
