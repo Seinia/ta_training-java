@@ -45,3 +45,45 @@ mvn -Dbrowser=firefox -Dtest=RunnerClass -Denvironment=qa clean test
   - **Parallel Execution**: Tests can be executed simultaneously, which accelerates the testing process.
   - **Logging**: Logging is implemented to enhance traceability and simplify debugging during test execution.
   - **Data Provider**: Tests are parameterized using Data Providers, making it easier to handle various input scenarios.
+
+# Optional Tasks
+
+## Pastebin Test №1
+ 
+## Test Scenario
+
+- **UC-1**: Test creation form of paste.
+  - Enter any text in the "Username" and "Password" fields.
+  - Clear the input fields.
+  - Click the "Login" button.
+  - Verify the error message: "Username is required".
+
+To execute final test for Edge browser use the following command:
+```bash
+mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest1 -Denvironment=qa clean test
+```
+
+## Pastebin Test №2
+ 
+## Test Scenario
+
+- **UC-1**: Test creation form of paste and verification of inputed data.
+- Open https://pastebin.com/ or a similar service in any browser.
+- Create 'New Paste' with the following attributes:
+   * Code:
+            git config --global user.name  "New Sheriff in Town"
+            git reset $(git commit-tree HEAD^{tree} -m "Legacy code")
+            git push origin master --force
+   * Syntax Highlighting: "Bash"
+   * Paste Expiration: "10 Minutes"
+   * Paste Name / Title: "how to gain dominance among developers"
+-Save 'paste' and check the following:
+   * Browser page title matches 'Paste Name / Title'
+   * Syntax is suspended for bash
+   * Check that the code matches the one from paragraph 2.
+
+
+To execute final test for Edge browser use the following command:
+```bash
+mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest2 -Denvironment=qa clean test
+```
