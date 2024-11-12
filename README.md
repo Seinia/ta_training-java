@@ -48,7 +48,7 @@ mvn -Dbrowser=firefox -Dtest=RunnerClass -Denvironment=qa clean test
 
 # Optional Tasks
 
-## Pastebin Test №1
+## 1. Pastebin Test №1
  
 ### Test Scenario
 
@@ -63,7 +63,7 @@ To execute final test for Chrome browser use the following command:
 mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest1 -Denvironment=qa clean test
 ```
 
-## Pastebin Test №2
+## 2. Pastebin Test №2
  
 ### Test Scenario
 
@@ -88,7 +88,7 @@ To execute final test for Chrome browser use the following command:
 mvn -Dbrowser=chrome -Dtest=WebDriverPastebinTest2 -Denvironment=qa clean test
 ```
 
-## Cloud google calculator test
+## 3. Cloud google calculator test
  
 ### Test Scenario
 
