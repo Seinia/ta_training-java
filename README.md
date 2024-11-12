@@ -4,7 +4,16 @@
 
 This project contains automated tests for the login form on the [SauceDemo](https://www.saucedemo.com/) website. The tests cover various login scenarios, including validation of error messages and successful login.
 
-![image](https://github.com/user-attachments/assets/30d1589b-6719-4d5f-973c-bc97794dc9a2)
+### Requirements:
+- Test automation tool: Selenium WebDriver;
+- Project builder: Maven;
+- Browsers: Firefox, Edge;
+- Locators: XPath;
+- Test Runner: JUnit;
+- [Optional] Patterns: Singleton, Factory method, Abstract Factory;
+- Test automation approach: BDD;
+- Assertions: AssertJ;
+- [Optional] Loggers: SLF4J.
 
 
 ## Running Tests
